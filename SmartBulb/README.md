@@ -33,9 +33,9 @@ This project demonstrates how to control a bulb using both text input and speech
    ```
 
 3. Install the required Python libraries:
-```bash
-      pip install SpeechRecognition pyaudio requests
- ```  
+  ```bash
+        pip install SpeechRecognition pyaudio requests
+   ```  
 
 4. Install and set up DGX Server on your machine. Follow the instructions provided by DGX Server documentation for installation.
 
@@ -67,5 +67,5 @@ This project demonstrates how to control a bulb using both text input and speech
 
 ## Contributors
 
-- Nithya Vaibhavi(https://github.com/Nithya Vaibhavi)
+- Nithya Vaibhavi(https://github.com/NithyaVaibhavi)
 - Jahnavi Sangam().
