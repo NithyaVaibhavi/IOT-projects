@@ -27,17 +27,17 @@ This project demonstrates how to control a bulb using both text input and speech
 
 ### Installation
 
-1. Clone this repository to your local machine:
-
+1. Clone this repository to your local machine
+   ```bash
       git clone https://github.com/your-username/bulb-control-with-dgx-server.git
- 
+   ```
 
-2. Install the required Python libraries:
-
+3. Install the required Python libraries:
+```bash
       pip install SpeechRecognition pyaudio requests
-   
+ ```  
 
-3. Install and set up DGX Server on your machine. Follow the instructions provided by DGX Server documentation for installation.
+4. Install and set up DGX Server on your machine. Follow the instructions provided by DGX Server documentation for installation.
 
 ### Setup Arduino
 
