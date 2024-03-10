@@ -43,3 +43,4 @@ This project demonstrates how to perform face recognition using Python and ESP32
 ## Contributors
 
 - Nithya Vaibhavi(https://github.com/NithyaVaibhavi)
+- Jahnavi Sangam().
