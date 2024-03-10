@@ -1,71 +1,45 @@
-# Bulb Control with Text Input and Speech Recognition using DGX Server
+# Face Recognition using Python and ESP32
 
-This project demonstrates how to control a bulb using both text input and speech recognition. It utilizes an ESP32 microcontroller, Arduino, and Python scripts to interact with the bulb. The bulb can be controlled either by sending text commands via a web interface or by issuing voice commands through a server-based AI powered by DGX Server.
+This project demonstrates how to perform face recognition using Python and ESP32 microcontroller. It utilizes the OpenCV and face_recognition libraries in Python to detect and recognize faces from a webcam feed. When a recognized face is detected, a command is sent to an ESP32 microcontroller to trigger an action, such as turning off a buzzer. Else if an intruder is detected the buxxer turns on the buzzer alterting the user.
 
-## Features
+## Requirements
 
-- Control the bulb manually via a web interface with text input.
-- Control the bulb using voice commands through a server-based AI.
-- Integrates with DGX Server for speech recognition and natural language processing.
-
-## Software Requirements
-
-- Arduino IDE
 - Python (version 3.9 recommended)
-- Python Libraries
-  - SpeechRecognition
-  - pyaudio
-  - requests (for interacting with DGX Server)
-- DGX Server bulb api
+- OpenCV (for capturing images from webcam)
+- face_recognition (for face detection and recognition)
+- websocket-client (for communicating with ESP32 via WebSocket)
 
-## Hardware Requirements
+## Setup
 
-- ESP32 microcontroller or similar
-- Bulb (connected to a relay for control)
-- Jumper wires
-- Power supply
+1. **Install Python Dependencies:**
+   Install the required Python libraries using pip:
+   ```bash
+   pip install opencv-python face_recognition websocket-client
+   ```
 
-### Installation
+2. **ESP32 Setup:**
+   Ensure your ESP32 microcontroller is connected to your network and has a WebSocket server running. Replace the WebSocket URL in the `send_command_to_esp32()` function with the URL of your ESP32 WebSocket server.
 
-1. Clone this repository to your local machine:
-
-      git clone https://github.com/your-username/bulb-control-with-dgx-server.git
- 
-
-2. Install the required Python libraries:
-
-      pip install SpeechRecognition pyaudio requests
-   
-
-3. Install and set up DGX Server on your machine. Follow the instructions provided by DGX Server documentation for installation.
-
-### Setup Arduino
-
-1. Connect the relay module to your ESP32 according to the circuit diagram.
-2. Upload the Arduino code from `arduino_code/bulb_control.ino` to your ESP32 using the Arduino IDE.
-
-### Running the Python Scripts
-
-1. Start DGX Server and ensure it's running.
-2. Navigate to the `python_code` directory.
-3. Run `bulb_control_server.py`:
-
-     python bulb_control_server.py
- 
-
-4. Follow the instructions provided by DGX Server to set up your voice model and train it if necessary.
-
-### Controlling the Bulb
-
-- **Web Interface**: Access the web interface at `http://localhost:5000` or your ESP32's IP address to control the bulb manually with text input.
-- **Voice Control**: Issue voice commands after setting up and training the server-based AI with DGX Server.
+3. **Face Images:**
+   Prepare images of the faces you want to recognize. Ensure that each image contains only one face and is saved in the `faces` directory with the naming convention `personX.jpg`, where X is a sequential number starting from 1.
 
 ## Usage
 
-- Use the web interface or issue voice commands to turn the bulb on or off.
-- Experiment with different voice commands and text inputs to control the bulb in various ways.
+1. **Run the Python Script:**
+   Run the Python script `face_recognition_esp32.py` using the following command:
+   ```bash
+   python face_recognition_esp32.py
+   ```
+
+2. **Face Recognition:**
+   The script will continuously capture frames from the webcam and perform face recognition. If a recognized face is detected, a command will be sent to the ESP32 microcontroller.
+
+## Notes
+
+- Ensure that the ESP32 WebSocket server is reachable from the machine running the Python script.
+- Make sure that the face images used for recognition are clear and distinct to improve recognition accuracy.
+- Customize the actions triggered by the ESP32 microcontroller based on your project requirements.
 
 ## Contributors
 
-- Nithya Vaibhavi(https://github.com/Nithya Vaibhavi)
-- Jahnavi Sangam().
+- Nithya Vaibhavi(https://github.com/NithyaVaibhavi)
