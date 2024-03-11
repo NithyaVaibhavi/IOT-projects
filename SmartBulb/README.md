@@ -68,4 +68,4 @@ This project demonstrates how to control a bulb using both text input and speech
 ## Contributors
 
 - Nithya Vaibhavi(https://github.com/NithyaVaibhavi)
-- Jahnavi Sangam().
+- Jahnavi Sangam(https://github.com/SangamJahnavi).
