@@ -13,4 +13,4 @@ Feel free to explore each project for detailed instructions and implementation d
 ## Contributors
 
 - Nithya Vaibhavi(https://github.com/NithyaVaibhavi)
-- Jahnavi Sangam().
+- Jahnavi Sangam(https://github.com/SangamJahnavi).
