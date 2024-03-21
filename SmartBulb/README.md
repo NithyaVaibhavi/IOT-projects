@@ -29,7 +29,7 @@ This project demonstrates how to control a bulb using both text input and speech
 
 1. Clone this repository to your local machine
    ```bash
-      git clone https://github.com/your-username/bulb-control-with-dgx-server.git
+      git clone https://github.com/NithyaVaibhavi/bulb-control-with-dgx-server.git
    ```
 
 3. Install the required Python libraries:
